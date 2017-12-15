@@ -16,6 +16,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.adamant.entity.UserEntity;
 import com.adamant.service.IUserService;
 
+/**
+ * 用户控制类
+ * TODO: 用户信息控制层
+ * @author xman
+ * @time 2016年12月15日 下午5:21:17
+ * @version v1.0
+ */
 @Controller
 @RequestMapping("/userController")
 public class UserController {
