@@ -6,11 +6,11 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="mobile" property="mobile" jdbcType="VARCHAR" />
-    <result column="state" property="state" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
     <result column="role_id" property="roleId" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, password, mobile, state, role_id
+    id, name, password, mobile, status, role_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
@@ -24,10 +24,10 @@
   </delete>
   <insert id="insert" parameterType="com.adamant.entity.UserEntity" >
     insert into user (id, name, password, 
-      mobile, state, role_id
+      mobile, status, role_id
       )
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{mobile,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR}
+      #{mobile,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{roleId,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.adamant.entity.UserEntity" >
@@ -45,8 +45,8 @@
       <if test="mobile != null" >
         mobile,
       </if>
-      <if test="state != null" >
-        state,
+      <if test="status != null" >
+        status,
       </if>
       <if test="roleId != null" >
         role_id,
@@ -65,8 +65,8 @@
       <if test="mobile != null" >
         #{mobile,jdbcType=VARCHAR},
       </if>
-      <if test="state != null" >
-        #{state,jdbcType=VARCHAR},
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="roleId != null" >
         #{roleId,jdbcType=VARCHAR},
@@ -85,8 +85,8 @@
       <if test="mobile != null" >
         mobile = #{mobile,jdbcType=VARCHAR},
       </if>
-      <if test="state != null" >
-        state = #{state,jdbcType=VARCHAR},
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
       </if>
       <if test="roleId != null" >
         role_id = #{roleId,jdbcType=VARCHAR},
@@ -99,7 +99,7 @@
     set name = #{name,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       mobile = #{mobile,jdbcType=VARCHAR},
-      state = #{state,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
       role_id = #{roleId,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>

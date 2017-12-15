@@ -44,7 +44,7 @@
 	<filter-mapping><!-- 过滤器映射(规律规则) -->
 		<filter-name>xFilter</filter-name><!-- 过滤器映射名 -->
 		<url-pattern>/userController/*</url-pattern><!-- 映射到Web的请求路径信息 -->
-		<url-pattern>/noFilterController/*</url-pattern><!-- 映射到Web的请求路径信息 -->
+		<!-- <url-pattern>/noFilterController/*</url-pattern> 映射到Web的请求路径信息 -->
 	</filter-mapping>
 
 	<!-- Spring监听器 -->
