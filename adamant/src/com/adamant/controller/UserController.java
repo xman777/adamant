@@ -16,19 +16,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.adamant.entity.UserEntity;
 import com.adamant.service.IUserService;
 
-/**
- * 用户控制类
- * TODO: 处理用户信息
- * @author xman
- * @time 2016年12月15日 下午4:29:54
- * @version v1.0
- */
 @Controller
 @RequestMapping("/userController")
 public class UserController {
 	
 	@Autowired
-    private IUserService userService;
+    private IUserService userService;  
       
     @RequestMapping("/xtest")
     public ModelAndView toIndex(HttpServletRequest request,Model model){
