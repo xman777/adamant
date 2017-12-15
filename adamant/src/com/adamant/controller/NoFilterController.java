@@ -16,6 +16,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.adamant.entity.UserEntity;
 import com.adamant.service.IUserService;
 
+/**
+ * 不经过过滤器的控制类
+ * TODO: 
+ * @author xman
+ * @time 2017年12月15日 下午5:38:52
+ * @version v1.0
+ */
 @Controller
 @RequestMapping("/noFilterController")
 public class NoFilterController {
