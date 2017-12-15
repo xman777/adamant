@@ -53,15 +53,15 @@ public class XFilter implements Filter {
 		System.out.println("xxxxxxxxxxxxparam2:"+param2);
 		
 		/*
-		   getRequestURL 方法返回客户端发出请求时的完整URL。
-		　　getRequestURI 方法返回请求行中的资源名部分。
-		　　getQueryString 方法返回请求行中的参数部分。
-		　　getPathInfo 方法返回请求URL中的额外路径信息。额外路径信息是请求URL中的位于Servlet的路径之后和查询参数之前的内容，它以“/”开头。
-		　　getRemoteAddr 方法返回发出请求的客户机的IP地址。
-		　　getRemoteHost 方法返回发出请求的客户机的完整主机名。
-		　　getRemotePort 方法返回客户机所使用的网络端口号。
-		　　getLocalAddr 方法返回WEB服务器的IP地址。
-		　　getLocalName 方法返回WEB服务器的主机名。
+			getRequestURL 方法返回客户端发出请求时的完整URL。
+			getRequestURI 方法返回请求行中的资源名部分。
+			getQueryString 方法返回请求行中的参数部分。
+			getPathInfo 方法返回请求URL中的额外路径信息。额外路径信息是请求URL中的位于Servlet的路径之后和查询参数之前的内容，它以“/”开头。
+			getRemoteAddr 方法返回发出请求的客户机的IP地址。
+			getRemoteHost 方法返回发出请求的客户机的完整主机名。
+			getRemotePort 方法返回客户机所使用的网络端口号。
+			getLocalAddr 方法返回WEB服务器的IP地址。
+			getLocalName 方法返回WEB服务器的主机名。
 		 */
 		//获取用户请求URL
 		String uri = request.getRequestURI();
